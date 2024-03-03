@@ -3,7 +3,7 @@
 
 from flask import Flask, request, render_template
 import pickle
-from config import port_number
+
 
 app = Flask(__name__)
 
@@ -44,4 +44,4 @@ def predict():
     return render_template('index.html', prediction=result)
 
 if __name__ == '__main__':
-    app.run(port=port_number, debug=False)
+    app.run(debug=False)
